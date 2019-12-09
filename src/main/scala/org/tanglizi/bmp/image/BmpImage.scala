@@ -69,8 +69,10 @@ class BmpImage(val bmpHeader: BmpHeader,
 
   // --------------- Image Drawing Operations ---------------
 
-  def fill(color: (Short, Short, Short)): Unit =
-    this.colorTable = Seq.fill(colorTable.length, colorTable(0).length)(color)
+  def fill(color: (Short, Short, Short)): BmpImage = new BmpImage(
+    this.bmpHeader, this.dibHeader,
+    Seq.fill(colorTable.length, colorTable(0).length)(color)
+  )
 }
 
 object BmpImage {

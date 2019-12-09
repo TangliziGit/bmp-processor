@@ -7,19 +7,15 @@ import org.tanglizi.bmp.image.BmpImage
  *
  */
 object App extends App {
-  var image: BmpImage = BmpImage.create(200, 144)
-  image.fill(255, 0, 0)
-  image.save("blue.bmp")
+  BmpImage.create(200, 144)
+    .fill(255, 0, 0)
+    .save("images/blue.bmp")
 
-  image = BmpImage.fromPath("up.bmp")
-  image.rotate90(false).save("right.bmp")
-  image.rotate180().save("down.bmp")
-  image.mirror().save("up_x_mirror.bmp")
-  image.mirror(false).save("up_y_mirror.bmp")
+  val image = BmpImage.fromPath("images/up.bmp")
+  image.rotate90(false).save("images/right.bmp")
+  image.rotate180().save("images/down.bmp")
+  image.mirror().save("images/up_x_mirror.bmp")
+  image.mirror(false).save("images/up_y_mirror.bmp")
 
-  println(image.dibHeader.width)
-  println(image.dibHeader.height)
   println(image.dibHeader)
-  println(image(99, 99))
-  println(image(0, 0))
 }
