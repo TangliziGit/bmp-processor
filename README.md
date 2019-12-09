@@ -36,7 +36,7 @@ image.mirror().save("up_x_mirror.bmp")
 image.mirror(false).save("up_y_mirror.bmp")
 ```
 
-![](/home/tanglizi/Experiments/media/lab2/bmp-processor/images/result.png)
+![](https://raw.githubusercontent.com/TangliziGit/bmp-processor/master/images/result.png)
 
 ```scala
 // if you want to see the file structure:
