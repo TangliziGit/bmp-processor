@@ -9,22 +9,13 @@ object BmpWriter {
 
     bmpImage.bmpHeader.addContentToStream(buffer)
     bmpImage.dibHeader.addContentToStream(buffer)
-    /*
-        bmpImage.colorTable.foreach(xs => {
+    bmpImage.colorTable.foreach(xs => {
       xs.foreach(rgb => {
         buffer.put(rgb._1.toByte)
         buffer.put(rgb._2.toByte)
         buffer.put(rgb._3.toByte)
       })
     })
-    */
-    for (y <- 0 until bmpImage.colorTable.length)
-      for (x <- 0 until bmpImage.colorTable(0).length) {
-        val rgb = bmpImage.colorTable(y)(x)
-        buffer.put(rgb._1.toByte)
-        buffer.put(rgb._2.toByte)
-        buffer.put(rgb._3.toByte)
-      }
 
     buffer.array()
   }

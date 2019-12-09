@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="bmp-processor:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/bmp_processor_jar</output-path>
+    <root id="root">
+      <element id="archive" name="bmp-processor.jar">
+        <element id="module-output" name="bmp-processor" />
+      </element>
+      <element id="library" level="project" name="Maven: org.scala-lang:scala-library:2.13.0" />
+    </root>
+  </artifact>
+</component>
